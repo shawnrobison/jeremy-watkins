@@ -5,7 +5,7 @@
     "description": "Research and domain investigation. First stop for any unfamiliar territory.",
     "initials": "SM",
     "color": "#6366f1",
-    "portrait": "https://api.dicebear.com/9.x/personas/svg?seed=ScoutMasterson&backgroundColor=1e1b4b&clothingColor=312e81&eyes=glasses&hair=shortCombover&skinColor=f5cfa0"
+    "portrait": "https://randomuser.me/portraits/women/44.jpg"
   },
   {
     "name": "Petra Vance",
@@ -13,7 +13,7 @@
     "description": "Specialist hiring and team building. Creates new agents when the team has a gap.",
     "initials": "PV",
     "color": "#ec4899",
-    "portrait": "https://api.dicebear.com/9.x/personas/svg?seed=PetraVance&backgroundColor=500724&clothingColor=9d174d&hair=wavyBob&skinColor=f5d0a9"
+    "portrait": "https://randomuser.me/portraits/women/68.jpg"
   },
   {
     "name": "Finley Cole",
@@ -21,7 +21,7 @@
     "description": "Budgeting, spending categories, and debt management.",
     "initials": "FC",
     "color": "#10b981",
-    "portrait": "https://api.dicebear.com/9.x/personas/svg?seed=FinleyCole&backgroundColor=064e3b&clothingColor=065f46&hair=shortAndStraight&skinColor=d4a574"
+    "portrait": "https://randomuser.me/portraits/men/32.jpg"
   },
   {
     "name": "Warren Cole",
@@ -29,6 +29,6 @@
     "description": "Portfolio strategy, retirement planning, and long-term wealth building.",
     "initials": "WC",
     "color": "#f59e0b",
-    "portrait": "https://api.dicebear.com/9.x/personas/svg?seed=WarrenCole&backgroundColor=451a03&clothingColor=78350f&hair=shortAndReceding&skinColor=c68642&beard=full"
+    "portrait": "https://randomuser.me/portraits/men/77.jpg"
   }
 ]
