@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "text": "Set up Google Cloud project and enable Sheets API",
+    "done": false,
+    "priority": "high",
+    "category": "Infrastructure"
+  },
+  {
+    "id": 2,
+    "text": "Add Google OAuth Client ID to dashboard config.js",
+    "done": false,
+    "priority": "high",
+    "category": "Infrastructure"
+  },
+  {
+    "id": 3,
+    "text": "Complete Open Brain health category (doctors, insurance, allergies, meds)",
+    "done": false,
+    "priority": "medium",
+    "category": "Open Brain"
+  },
+  {
+    "id": 4,
+    "text": "Add Jennifer's Gmail to Jeremy via MCP",
+    "done": false,
+    "priority": "medium",
+    "category": "Infrastructure"
+  },
+  {
+    "id": 5,
+    "text": "Document contacts and vendors in Open Brain",
+    "done": false,
+    "priority": "low",
+    "category": "Open Brain"
+  },
+  {
+    "id": 6,
+    "text": "Document appliances in Open Brain",
+    "done": false,
+    "priority": "low",
+    "category": "Open Brain"
+  }
+]
