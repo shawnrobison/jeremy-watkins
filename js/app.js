@@ -148,9 +148,9 @@ async function fetchHsaTotal() {
 
   try {
     const range = `${CONFIG.hsaSheetName}!${CONFIG.hsaTotalCell}`;
-    const url   = `https://sheets.googleapis.com/v4/spreadsheets/${CONFIG.hsaSpreadsheetId}/values/${encodeURIComponent(range)}`;
+    const url   = `https://sheets.googleapis.com/v4/spreadsheets/${CONFIG.hsaSpreadsheetId}/values/${encodeURIComponent(range)}?key=${CONFIG.googleApiKey}`;
 
-    const res  = await fetch(url, { headers: { Authorization: `Bearer ${accessToken}` } });
+    const res  = await fetch(url);
     const data = await res.json();
 
     if (!res.ok) throw new Error(data.error?.message || "Sheets API error");
@@ -301,4 +301,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadTeam();
   loadTodos();
   loadSpendingChart();
+  fetchHsaTotal();
 });

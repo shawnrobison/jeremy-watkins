@@ -8,12 +8,13 @@
 
 const CONFIG = {
   googleClientId: "329712852800-nqicb9fl523bh1469nblsngo9ac57qk0.apps.googleusercontent.com",
+  googleApiKey:   "AIzaSyBZr2flnfRgH5CGn7_Aq7YlbQ4lH2v5m40",
 
   // HSA Tracker spreadsheet
   hsaSpreadsheetId: "1aU2y4D8MR47-toWDgPQtJ_kFMhlj69hA0Bw_AkEIv4g",
-  hsaTotalCell: "D2",          // Cell containing the "TOTAL WITHDRAWL AVAILABLE" value
-  hsaSheetName: "Sheet1",      // Tab name — update if different
+  hsaTotalCell: "D2",
+  hsaSheetName: "Sheet1",
 
-  // OAuth scopes needed
+  // OAuth scopes (kept for future use)
   scopes: "https://www.googleapis.com/auth/spreadsheets.readonly",
 };
