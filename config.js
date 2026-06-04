@@ -8,7 +8,7 @@
 
 const CONFIG = {
   googleClientId: "329712852800-nqicb9fl523bh1469nblsngo9ac57qk0.apps.googleusercontent.com",
-  googleApiKey:   "AIzaSyBZr2flnfRgH5CGn7_Aq7YlbQ4lH2v5m40",
+  googleApiKey:   "AIzaSyDKSYLsRTNPhaox1gRexzdunyUw3tacQW8",
 
   // HSA Tracker spreadsheet
   hsaSpreadsheetId: "1aU2y4D8MR47-toWDgPQtJ_kFMhlj69hA0Bw_AkEIv4g",
