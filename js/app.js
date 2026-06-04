@@ -158,7 +158,6 @@ async function fetchHsaTotal() {
     const raw = data.values?.[0]?.[0];
     if (raw === undefined || raw === null) throw new Error("Cell is empty — check hsaTotalCell in config.js");
 
-    // Parse value — strip $ and commas if present
     const num = parseFloat(String(raw).replace(/[$,]/g, ""));
     if (isNaN(num)) throw new Error(`Unexpected value in cell: "${raw}"`);
 
@@ -166,6 +165,7 @@ async function fetchHsaTotal() {
     document.getElementById("hsa-updated").textContent = "Updated " + new Date().toLocaleTimeString();
     document.getElementById("hsa-sheet-link").href =
       `https://docs.google.com/spreadsheets/d/${CONFIG.hsaSpreadsheetId}`;
+    document.getElementById("hsa-sheet-link").style.display = "inline";
 
     loadingEl.style.display = "none";
     dataEl.style.display    = "block";

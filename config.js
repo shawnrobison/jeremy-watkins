@@ -11,7 +11,7 @@ const CONFIG = {
 
   // HSA Tracker spreadsheet
   hsaSpreadsheetId: "1aU2y4D8MR47-toWDgPQtJ_kFMhlj69hA0Bw_AkEIv4g",
-  hsaTotalCell: "B2",          // Cell containing the "TOTAL WITHDRAWL AVAILABLE" value
+  hsaTotalCell: "D2",          // Cell containing the "TOTAL WITHDRAWL AVAILABLE" value
   hsaSheetName: "Sheet1",      // Tab name — update if different
 
   // OAuth scopes needed
