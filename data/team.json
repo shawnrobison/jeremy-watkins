@@ -1,11 +1,19 @@
 [
   {
+    "name": "Jeremy Watkins",
+    "role": "AI Orchestrator",
+    "description": "Team lead and task router. Delegates to specialists, reviews output, and keeps everything moving.",
+    "initials": "JW",
+    "color": "#38bdf8",
+    "portrait": "images/Jeremy Watkins Headshot.png"
+  },
+  {
     "name": "Scout Masterson",
     "role": "Senior Researcher",
     "description": "Research and domain investigation. First stop for any unfamiliar territory.",
     "initials": "SM",
     "color": "#6366f1",
-    "portrait": "https://randomuser.me/portraits/men/54.jpg"
+    "portrait": "images/Scout Masterson Headshot.png"
   },
   {
     "name": "Petra Vance",
@@ -13,7 +21,7 @@
     "description": "Specialist hiring and team building. Creates new agents when the team has a gap.",
     "initials": "PV",
     "color": "#ec4899",
-    "portrait": "https://randomuser.me/portraits/women/68.jpg"
+    "portrait": "images/Petra Vance Headshot.png"
   },
   {
     "name": "Finley Cole",
@@ -21,7 +29,7 @@
     "description": "Budgeting, spending categories, and debt management.",
     "initials": "FC",
     "color": "#10b981",
-    "portrait": "https://randomuser.me/portraits/men/32.jpg"
+    "portrait": "images/Finley Cole Headshot.png"
   },
   {
     "name": "Warren Cole",
@@ -29,6 +37,14 @@
     "description": "Portfolio strategy, retirement planning, and long-term wealth building.",
     "initials": "WC",
     "color": "#f59e0b",
-    "portrait": "https://randomuser.me/portraits/men/83.jpg"
+    "portrait": "images/Warren Cole Headshot.png"
+  },
+  {
+    "name": "Clio Nash",
+    "role": "Content Analyst & Taxonomist",
+    "description": "Summarization, key idea extraction, and tagging for the AI Reading List.",
+    "initials": "CN",
+    "color": "#8b5cf6",
+    "portrait": "images/Clio Nash Headshot.png"
   }
 ]
