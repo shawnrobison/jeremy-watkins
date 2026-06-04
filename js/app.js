@@ -197,5 +197,4 @@ document.addEventListener("DOMContentLoaded", () => {
   updateDateDisplay();
   loadTeam();
   loadTodos();
-  initGoogleAuth();
 });
