@@ -116,7 +116,7 @@ main {
   flex: 1;
   padding: 28px 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 24px;
 }
@@ -453,7 +453,7 @@ main {
 
 /* ── Chart Panel ──────────────────────────────────────────────────────────── */
 .chart-panel {
-  grid-column: 1 / -1;
+  grid-column: 3;
 }
 
 .chart-legend {
@@ -481,13 +481,21 @@ main {
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  main { grid-template-columns: 1fr; padding: 20px 16px; }
-  .team-panel { grid-column: 1; }
+@media (max-width: 1100px) {
+  main { grid-template-columns: 1fr 1fr; padding: 20px 16px; }
+  .team-panel  { grid-column: 1 / -1; }
+  .hsa-panel   { grid-column: 1; }
+  .todo-panel  { grid-column: 2; }
+  .chart-panel { grid-column: 1 / -1; }
+  header { padding: 16px; }
+}
+
+@media (max-width: 640px) {
+  main { grid-template-columns: 1fr; }
   .hsa-panel  { grid-column: 1; }
   .todo-panel { grid-column: 1; }
+  .chart-panel { grid-column: 1; }
   .team-grid  { grid-template-columns: repeat(2, 1fr); }
-  header { padding: 16px; }
 }
 
 @media (max-width: 480px) {
