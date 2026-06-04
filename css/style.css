@@ -297,6 +297,12 @@ header {
   margin-top: 8px;
 }
 
+/* ── Tasks Tab ────────────────────────────────────────────────────────────── */
+#tab-tasks.active {
+  display: block;
+  max-width: 640px;
+}
+
 /* ── HSA / Budget Panel ───────────────────────────────────────────────────── */
 .hsa-panel { grid-column: 1; }
 
@@ -359,7 +365,6 @@ header {
 }
 
 /* ── To-Do Panel ──────────────────────────────────────────────────────────── */
-.todo-panel { grid-column: 2; }
 
 .todo-list {
   display: flex;

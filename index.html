@@ -37,6 +37,9 @@
       <button class="tab-btn" data-tab="home">
         <span class="tab-icon">&#127968;</span> Home
       </button>
+      <button class="tab-btn" data-tab="tasks">
+        <span class="tab-icon">&#9989;</span> Tasks
+      </button>
     </nav>
 
     <!-- ── Tab: Team ───────────────────────────────────────────────────── -->
@@ -53,24 +56,6 @@
         <div class="panel-body">
           <div class="team-grid" id="team-grid">
             <div class="loading"><div class="spinner"></div> Loading team&hellip;</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel todo-panel">
-        <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#9989;</span>
-            Open Items
-          </div>
-        </div>
-        <div class="panel-body">
-          <div id="todo-list" class="todo-list">
-            <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
-          </div>
-          <div class="todo-footer">
-            <span class="todo-count" id="todo-count"></span>
-            <a href="data/todos.json" target="_blank" class="btn btn-sm">Edit JSON &#8599;</a>
           </div>
         </div>
       </section>
@@ -228,6 +213,29 @@
             <div class="coming-soon-icon">&#128268;</div>
             <div class="coming-soon-label">Coming Soon</div>
             <p>Appliance inventory, purchase dates, manuals, and warranty expirations.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Tab: Tasks ────────────────────────────────────────────────────────── -->
+    <main class="tab-content" id="tab-tasks">
+
+      <section class="panel todo-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#9989;</span>
+            Open Items
+          </div>
+        </div>
+        <div class="panel-body">
+          <div id="todo-list" class="todo-list">
+            <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
+          </div>
+          <div class="todo-footer">
+            <span class="todo-count" id="todo-count"></span>
+            <a href="data/todos.json" target="_blank" class="btn btn-sm">Edit JSON &#8599;</a>
           </div>
         </div>
       </section>
