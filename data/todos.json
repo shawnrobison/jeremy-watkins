@@ -2,40 +2,75 @@
   {
     "id": 1,
     "text": "Set up Google Cloud project and enable Sheets API",
-    "done": false,
+    "done": true,
     "priority": "high",
     "category": "Infrastructure"
   },
   {
     "id": 2,
     "text": "Add Google OAuth Client ID to dashboard config.js",
-    "done": false,
+    "done": true,
     "priority": "high",
     "category": "Infrastructure"
   },
   {
     "id": 3,
-    "text": "Complete Open Brain health category (doctors, insurance, allergies, meds)",
-    "done": false,
-    "priority": "medium",
-    "category": "Open Brain"
+    "text": "Wire up HSA API key — no login required",
+    "done": true,
+    "priority": "high",
+    "category": "Infrastructure"
   },
   {
     "id": 4,
-    "text": "Add Jennifer's Gmail to Jeremy via MCP",
+    "text": "Connect Jennifer's Gmail to Jeremy via MCP",
     "done": false,
     "priority": "medium",
     "category": "Infrastructure"
   },
   {
     "id": 5,
+    "text": "Wire investments panel to Warren's portfolio spreadsheet",
+    "done": false,
+    "priority": "medium",
+    "category": "Dashboard"
+  },
+  {
+    "id": 6,
+    "text": "Make to-do list persistent (Google Sheets backend)",
+    "done": false,
+    "priority": "low",
+    "category": "Dashboard"
+  },
+  {
+    "id": 7,
+    "text": "Build out Automotive tab — vehicles, service, insurance",
+    "done": false,
+    "priority": "low",
+    "category": "Dashboard"
+  },
+  {
+    "id": 8,
+    "text": "Build out Home tab — property, projects, appliances",
+    "done": false,
+    "priority": "low",
+    "category": "Dashboard"
+  },
+  {
+    "id": 9,
+    "text": "Complete Open Brain health category (doctors, insurance, allergies, meds)",
+    "done": false,
+    "priority": "medium",
+    "category": "Open Brain"
+  },
+  {
+    "id": 10,
     "text": "Document contacts and vendors in Open Brain",
     "done": false,
     "priority": "low",
     "category": "Open Brain"
   },
   {
-    "id": 6,
+    "id": 11,
     "text": "Document appliances in Open Brain",
     "done": false,
     "priority": "low",
