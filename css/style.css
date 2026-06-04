@@ -112,13 +112,53 @@ header {
 
 .btn-sm { padding: 5px 10px; font-size: 12px; }
 
-main {
+/* ── Tab Bar ──────────────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 2px;
+  padding: 0 32px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  margin-bottom: -1px;
+}
+
+.tab-btn:hover { color: var(--text); }
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.tab-icon { font-size: 15px; }
+
+/* ── Tab Content ──────────────────────────────────────────────────────────── */
+.tab-content {
+  display: none;
   flex: 1;
   padding: 28px 32px;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
   gap: 24px;
+  align-items: start;
+}
+
+.tab-content.active {
+  display: grid;
 }
 
 /* ── Cards ────────────────────────────────────────────────────────────────── */
@@ -451,10 +491,8 @@ main {
   font-size: 12px;
 }
 
-/* ── Chart Panel ──────────────────────────────────────────────────────────── */
-.chart-panel {
-  grid-column: 3;
-}
+/* ── Panel-specific grid placement ───────────────────────────────────────── */
+.team-panel { grid-column: 1 / -1; }
 
 .chart-legend {
   display: flex;
@@ -480,22 +518,50 @@ main {
   flex-shrink: 0;
 }
 
+/* ── Coming Soon ──────────────────────────────────────────────────────────── */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  text-align: center;
+  gap: 8px;
+}
+
+.coming-soon-icon {
+  font-size: 32px;
+  opacity: 0.3;
+  margin-bottom: 4px;
+}
+
+.coming-soon-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.coming-soon p {
+  font-size: 12px;
+  color: var(--text-muted);
+  max-width: 220px;
+  line-height: 1.5;
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 1100px) {
-  main { grid-template-columns: 1fr 1fr; padding: 20px 16px; }
-  .team-panel  { grid-column: 1 / -1; }
-  .hsa-panel   { grid-column: 1; }
-  .todo-panel  { grid-column: 2; }
-  .chart-panel { grid-column: 1 / -1; }
+  .tab-content { grid-template-columns: 1fr 1fr; padding: 20px 16px; }
+  .tab-bar { padding: 0 16px; }
   header { padding: 16px; }
 }
 
 @media (max-width: 640px) {
-  main { grid-template-columns: 1fr; }
-  .hsa-panel  { grid-column: 1; }
-  .todo-panel { grid-column: 1; }
-  .chart-panel { grid-column: 1; }
-  .team-grid  { grid-template-columns: repeat(2, 1fr); }
+  .tab-content { grid-template-columns: 1fr; }
+  .team-panel  { grid-column: 1; }
+  .team-grid   { grid-template-columns: repeat(2, 1fr); }
+  .tab-btn span.tab-icon ~ * { display: none; }
 }
 
 @media (max-width: 480px) {

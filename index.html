@@ -23,10 +23,25 @@
       </div>
     </header>
 
-    <!-- ── Main ────────────────────────────────────────────────────────── -->
-    <main>
+    <!-- ── Tab Bar ─────────────────────────────────────────────────────── -->
+    <nav class="tab-bar">
+      <button class="tab-btn active" data-tab="team">
+        <span class="tab-icon">&#128101;</span> Team
+      </button>
+      <button class="tab-btn" data-tab="financials">
+        <span class="tab-icon">&#128200;</span> Financials
+      </button>
+      <button class="tab-btn" data-tab="automotive">
+        <span class="tab-icon">&#128664;</span> Automotive
+      </button>
+      <button class="tab-btn" data-tab="home">
+        <span class="tab-icon">&#127968;</span> Home
+      </button>
+    </nav>
 
-      <!-- Team Panel -->
+    <!-- ── Tab: Team ───────────────────────────────────────────────────── -->
+    <main class="tab-content active" id="tab-team">
+
       <section class="panel team-panel">
         <div class="panel-header">
           <div class="panel-title">
@@ -42,64 +57,6 @@
         </div>
       </section>
 
-      <!-- HSA / Budget Panel -->
-      <section class="panel hsa-panel">
-        <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#129657;</span>
-            HSA Tracker
-          </div>
-          <a id="hsa-sheet-link" href="#" target="_blank" style="font-size:12px; color:var(--accent); text-decoration:none; display:none">
-            Open Sheet &#8599;
-          </a>
-        </div>
-        <div class="panel-body">
-
-          <!-- Not configured state -->
-          <div id="hsa-not-configured" style="display:none; text-align:center; padding:24px 0">
-            <p style="color:var(--text-muted); font-size:13px; margin-bottom:8px">
-              Add your Google Client ID to <code>config.js</code> to connect live data.
-            </p>
-          </div>
-
-          <!-- Connect state -->
-          <div id="hsa-connect" class="hsa-connect" style="display:none">
-            <svg class="google-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-            </svg>
-            <p>Sign in with Google to load your live HSA withdrawal balance.</p>
-            <button class="btn btn-primary" onclick="signInGoogle()">Connect Google</button>
-          </div>
-
-          <!-- Loading state -->
-          <div id="hsa-loading" class="loading" style="display:none">
-            <div class="spinner"></div> Fetching HSA data&hellip;
-          </div>
-
-          <!-- Error state -->
-          <div id="hsa-error" class="error-msg" style="display:none"></div>
-
-          <!-- Data state -->
-          <div id="hsa-data" class="hsa-data">
-            <div class="hsa-total-label">Total Withdrawal Available</div>
-            <div class="hsa-total-value" id="hsa-total">&mdash;</div>
-            <div class="hsa-sub">Out-of-pocket expenses eligible for tax-free reimbursement</div>
-
-            <div class="hsa-divider"></div>
-
-            <div class="hsa-refresh-row">
-              <span class="hsa-last-updated" id="hsa-updated"></span>
-              <button class="btn btn-sm" onclick="fetchHsaTotal()">Refresh</button>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- To-Do Panel -->
       <section class="panel todo-panel">
         <div class="panel-header">
           <div class="panel-title">
@@ -118,11 +75,64 @@
         </div>
       </section>
 
-      <!-- Spending Chart Panel -->
+    </main>
+
+    <!-- ── Tab: Financials ─────────────────────────────────────────────── -->
+    <main class="tab-content" id="tab-financials">
+
+      <section class="panel hsa-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#129657;</span>
+            HSA Tracker
+          </div>
+          <a id="hsa-sheet-link" href="#" target="_blank" style="font-size:12px; color:var(--accent); text-decoration:none; display:none">
+            Open Sheet &#8599;
+          </a>
+        </div>
+        <div class="panel-body">
+
+          <div id="hsa-not-configured" style="display:none; text-align:center; padding:24px 0">
+            <p style="color:var(--text-muted); font-size:13px; margin-bottom:8px">
+              Add your Google Client ID to <code>config.js</code> to connect live data.
+            </p>
+          </div>
+
+          <div id="hsa-connect" class="hsa-connect" style="display:none">
+            <svg class="google-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            <p>Sign in with Google to load your live HSA withdrawal balance.</p>
+            <button class="btn btn-primary" onclick="signInGoogle()">Connect Google</button>
+          </div>
+
+          <div id="hsa-loading" class="loading" style="display:none">
+            <div class="spinner"></div> Fetching HSA data&hellip;
+          </div>
+
+          <div id="hsa-error" class="error-msg" style="display:none"></div>
+
+          <div id="hsa-data" class="hsa-data">
+            <div class="hsa-total-label">Total Withdrawal Available</div>
+            <div class="hsa-total-value" id="hsa-total">&mdash;</div>
+            <div class="hsa-sub">Out-of-pocket expenses eligible for tax-free reimbursement</div>
+            <div class="hsa-divider"></div>
+            <div class="hsa-refresh-row">
+              <span class="hsa-last-updated" id="hsa-updated"></span>
+              <button class="btn btn-sm" onclick="fetchHsaTotal()">Refresh</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <section class="panel chart-panel">
         <div class="panel-header">
           <div class="panel-title">
-            <span class="icon">&#128200;</span>
+            <span class="icon">&#128202;</span>
             Income vs. Spending
           </div>
           <span style="font-size:12px; color:var(--text-muted)">Mar &ndash; May 2026</span>
@@ -133,7 +143,114 @@
         </div>
       </section>
 
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128181;</span>
+            Investments
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#128200;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Warren will connect portfolio data here.</p>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <!-- ── Tab: Automotive ─────────────────────────────────────────────── -->
+    <main class="tab-content" id="tab-automotive">
+
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128664;</span>
+            Vehicles
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#128664;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Vehicle records, maintenance history, insurance, and registration dates.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128295;</span>
+            Service & Maintenance
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#128295;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Oil changes, tire rotations, upcoming service reminders.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ── Tab: Home ───────────────────────────────────────────────────── -->
+    <main class="tab-content" id="tab-home">
+
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#127968;</span>
+            Property
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#127968;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Home details, mortgage info, and property documents.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#9874;</span>
+            Projects &amp; Maintenance
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#9874;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Open projects, completed work, warranties, and contractor contacts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel coming-soon-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128268;</span>
+            Appliances
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="coming-soon">
+            <div class="coming-soon-icon">&#128268;</div>
+            <div class="coming-soon-label">Coming Soon</div>
+            <p>Appliance inventory, purchase dates, manuals, and warranty expirations.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
   </div>
 
   <!-- Chart.js -->
