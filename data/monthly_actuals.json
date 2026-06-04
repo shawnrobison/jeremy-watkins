@@ -1,0 +1,77 @@
+{
+  "generated": "2026-06-03",
+  "source": "Chase Checking, Chase CC, Citi CC (Mar-May), Fidelity CC",
+  "notes": {
+    "march_income": "High due to large TRINET payment on 3/20 — likely includes one-time bonus or reimbursement",
+    "april_misc": "High Misc in April due to $4,377 Root Insurance annual premium (car insurance)",
+    "savings": "Separated from spending — Fidelity transfers treated as savings, not expense"
+  },
+  "months": {
+    "2026-03": {
+      "label": "March",
+      "income": 29748.87,
+      "spending_total": 22418.99,
+      "savings": 17518.00,
+      "categories": {
+        "Housing": 3790.23,
+        "Utilities": 679.32,
+        "Groceries": 2471.50,
+        "Dining Out": 1184.84,
+        "Transportation": 1775.34,
+        "Tithe/Church": 2974.00,
+        "Kids/Activities": 1817.96,
+        "Shopping": 1918.33,
+        "Subscriptions": 350.45,
+        "Travel": 1213.00,
+        "Golf": 147.00,
+        "Pest Control": 87.33,
+        "Tax": 2348.00,
+        "Misc": 1661.69
+      }
+    },
+    "2026-04": {
+      "label": "April",
+      "income": 19812.49,
+      "spending_total": 21629.27,
+      "savings": 4248.00,
+      "categories": {
+        "Housing": 3742.24,
+        "Utilities": 664.61,
+        "Groceries": 1721.23,
+        "Dining Out": 247.69,
+        "Transportation": 2688.65,
+        "Tithe/Church": 1982.00,
+        "Kids/Activities": 1489.65,
+        "Shopping": 1111.21,
+        "Subscriptions": 446.66,
+        "Travel": 1500.35,
+        "Golf": 0.00,
+        "Pest Control": 91.69,
+        "Tax": 0.00,
+        "Misc": 5943.29
+      }
+    },
+    "2026-05": {
+      "label": "May",
+      "income": 19865.59,
+      "spending_total": 21829.45,
+      "savings": 1432.00,
+      "categories": {
+        "Housing": 3742.24,
+        "Utilities": 913.76,
+        "Groceries": 2043.42,
+        "Dining Out": 379.55,
+        "Transportation": 2908.30,
+        "Tithe/Church": 2053.00,
+        "Kids/Activities": 2623.52,
+        "Shopping": 1061.46,
+        "Subscriptions": 961.08,
+        "Travel": 3825.11,
+        "Golf": 156.70,
+        "Pest Control": 91.69,
+        "Tax": 0.00,
+        "Misc": 1069.62
+      }
+    }
+  }
+}

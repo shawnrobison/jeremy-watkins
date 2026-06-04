@@ -192,9 +192,99 @@ function showHsaError(msg) {
   el.style.display = "block";
 }
 
+// ── Spending Chart ────────────────────────────────────────────────────────────
+async function loadSpendingChart() {
+  try {
+    const res  = await fetch("data/monthly_actuals.json");
+    const data = await res.json();
+    const months = Object.values(data.months);
+
+    const labels   = months.map(m => m.label);
+    const income   = months.map(m => m.income);
+    const spending = months.map(m => m.spending_total);
+    const savings  = months.map(m => m.savings);
+
+    const ctx = document.getElementById("spending-chart").getContext("2d");
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          {
+            label:           "Income",
+            data:            income,
+            backgroundColor: "rgba(59, 185, 80, 0.8)",
+            borderColor:     "#3fb950",
+            borderWidth:     1,
+            borderRadius:    4,
+          },
+          {
+            label:           "Spending",
+            data:            spending,
+            backgroundColor: "rgba(248, 81, 73, 0.75)",
+            borderColor:     "#f85149",
+            borderWidth:     1,
+            borderRadius:    4,
+          },
+          {
+            label:           "Savings",
+            data:            savings,
+            backgroundColor: "rgba(88, 166, 255, 0.75)",
+            borderColor:     "#58a6ff",
+            borderWidth:     1,
+            borderRadius:    4,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${formatCurrency(ctx.raw)}`,
+            },
+          },
+        },
+        scales: {
+          x: {
+            grid:  { color: "rgba(48,54,61,0.6)" },
+            ticks: { color: "#7d8590" },
+          },
+          y: {
+            grid:  { color: "rgba(48,54,61,0.6)" },
+            ticks: {
+              color: "#7d8590",
+              callback: v => "$" + (v / 1000).toFixed(0) + "k",
+            },
+          },
+        },
+      },
+    });
+
+    // Custom legend
+    const legendData = [
+      { label: "Income",   color: "#3fb950" },
+      { label: "Spending", color: "#f85149" },
+      { label: "Savings",  color: "#58a6ff" },
+    ];
+    document.getElementById("chart-legend").innerHTML = legendData.map(l =>
+      `<div class="legend-item">
+         <div class="legend-dot" style="background:${l.color}"></div>
+         ${l.label}
+       </div>`
+    ).join("");
+
+  } catch (e) {
+    console.error("Chart failed to load:", e);
+  }
+}
+
 // ── Init ──────────────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   updateDateDisplay();
   loadTeam();
   loadTodos();
+  loadSpendingChart();
 });
