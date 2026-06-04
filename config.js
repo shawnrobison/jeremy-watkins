@@ -7,7 +7,7 @@
 //   4. Paste the Client ID below
 
 const CONFIG = {
-  googleClientId: "YOUR_GOOGLE_CLIENT_ID_HERE",
+  googleClientId: "329712852800-nqicb9fl523bh1469nblsngo9ac57qk0.apps.googleusercontent.com",
 
   // HSA Tracker spreadsheet
   hsaSpreadsheetId: "1aU2y4D8MR47-toWDgPQtJ_kFMhlj69hA0Bw_AkEIv4g",
