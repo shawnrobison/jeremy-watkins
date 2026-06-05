@@ -291,9 +291,14 @@ async function loadHome() {
     const p = data.property;
     const payoffYear = p.mortgage_payoff ? p.mortgage_payoff.split("-")[0] : "—";
     document.getElementById("home-property").innerHTML = `
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:14px">${p.address}</div>
       <div class="auto-info-row">
         <span class="auto-info-label">Est. Value</span>
         <span class="auto-info-value highlight">${formatCurrency(p.estimated_value)}</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Sq Ft</span>
+        <span class="auto-info-value">${p.sqft ? p.sqft.toLocaleString() : "—"}</span>
       </div>
       <div class="auto-info-row">
         <span class="auto-info-label">Mortgage</span>
