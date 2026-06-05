@@ -51,7 +51,7 @@
   {
     "id": 8,
     "text": "Build out Home tab — property, projects, appliances",
-    "done": false,
+    "done": true,
     "priority": "low",
     "category": "Dashboard"
   },
@@ -75,5 +75,26 @@
     "done": true,
     "priority": "low",
     "category": "Open Brain"
+  },
+  {
+    "id": 12,
+    "text": "Add Jennifer's health details to Open Brain",
+    "done": false,
+    "priority": "medium",
+    "category": "Open Brain"
+  },
+  {
+    "id": 13,
+    "text": "Hire car repair specialist via Petra",
+    "done": false,
+    "priority": "low",
+    "category": "Team"
+  },
+  {
+    "id": 14,
+    "text": "Hire home repair / handyman specialist via Petra",
+    "done": false,
+    "priority": "low",
+    "category": "Team"
   }
 ]
