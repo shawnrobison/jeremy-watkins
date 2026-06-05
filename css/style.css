@@ -524,6 +524,137 @@ header {
   flex-shrink: 0;
 }
 
+/* ── Automotive Tab ───────────────────────────────────────────────────────── */
+.auto-vehicles-panel { grid-column: 1 / -1; }
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.vehicle-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vehicle-year-make {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vehicle-model {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+.vehicle-driver {
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.vehicle-mileage {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.vehicle-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.vehicle-service { display: flex; flex-direction: column; gap: 4px; }
+
+.service-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-ok     { background: rgba(63,185,80,0.15);  color: var(--success); }
+.status-urgent { background: rgba(248,81,73,0.15);  color: var(--danger); }
+.status-soon   { background: rgba(210,153,34,0.15); color: var(--warning); }
+
+.service-detail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.vehicle-photo-wrap {
+  width: 100%;
+  height: 110px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.vehicle-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vehicle-photo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  opacity: 0.25;
+}
+
+.auto-insurance-panel { grid-column: 1; }
+.auto-loan-panel      { grid-column: 2; }
+
+.auto-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.auto-info-row:last-child { border-bottom: none; }
+.auto-info-label { color: var(--text-muted); font-size: 12px; }
+.auto-info-value { color: var(--text); font-weight: 500; text-align: right; }
+.auto-info-value.highlight { color: var(--accent); font-weight: 700; }
+.auto-info-value.danger    { color: var(--danger);  font-weight: 700; }
+.auto-info-value.warning   { color: var(--warning); }
+
+.renewal-alert {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(210,153,34,0.1);
+  border: 1px solid rgba(210,153,34,0.3);
+  font-size: 12px;
+  color: var(--warning);
+}
+
 /* ── Coming Soon ──────────────────────────────────────────────────────────── */
 .coming-soon {
   display: flex;

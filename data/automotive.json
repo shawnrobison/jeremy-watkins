@@ -1,0 +1,75 @@
+{
+  "vehicles": [
+    {
+      "year": 2017,
+      "make": "Ford",
+      "model": "F-150",
+      "driver": "Shawn",
+      "mileage": 136999,
+      "mileage_date": "2026-06-02",
+      "oil_change": {
+        "status": "ok",
+        "label": "Done 6/2/2026",
+        "detail": "Jiffy Lube — Basswood Blvd, Fort Worth"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/2016_Ford_F-150_XL_SuperCab_4x2_with_XL_Sport_Package%2C_front_right%2C_07-09-2023.jpg/960px-2016_Ford_F-150_XL_SuperCab_4x2_with_XL_Sport_Package%2C_front_right%2C_07-09-2023.jpg",
+      "loan": null
+    },
+    {
+      "year": 2022,
+      "make": "Ford",
+      "model": "Expedition",
+      "driver": "Jennifer",
+      "mileage": 85000,
+      "mileage_date": null,
+      "oil_change": {
+        "status": "urgent",
+        "label": "Due Now",
+        "detail": "Schedule immediately"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/2022_Ford_Expedition_Platinum_unmarked_unit%2C_front_4.14.23.jpg/960px-2022_Ford_Expedition_Platinum_unmarked_unit%2C_front_4.14.23.jpg",
+      "loan": {
+        "lender": "Ford Motor Credit",
+        "balance": 18387.60,
+        "monthly": 626.91,
+        "rate": "~6%"
+      }
+    },
+    {
+      "year": 2018,
+      "make": "Ford",
+      "model": "Fusion Hybrid",
+      "driver": "Jackson",
+      "mileage": null,
+      "mileage_date": null,
+      "oil_change": {
+        "status": "soon",
+        "label": "Due Aug 2026",
+        "detail": "Before school starts — check mileage"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ford_Fusion_Hybrid_Brazil_10_2015_BSB_471.JPG/960px-Ford_Fusion_Hybrid_Brazil_10_2015_BSB_471.JPG",
+      "loan": null
+    },
+    {
+      "year": 2011,
+      "make": "Nissan",
+      "model": "Xterra",
+      "driver": "Blake",
+      "mileage": 200000,
+      "mileage_date": null,
+      "oil_change": {
+        "status": "soon",
+        "label": "Due Aug 2026",
+        "detail": "Before Blake returns to SNU for fall"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Nissan_Xterra_%28N50%29_IMG_6174.jpg/960px-Nissan_Xterra_%28N50%29_IMG_6174.jpg",
+      "loan": null
+    }
+  ],
+  "insurance": {
+    "carrier": "Root Insurance",
+    "premium": 4377.00,
+    "frequency": "Semi-annual",
+    "next_renewal": "2026-10-23"
+  }
+}

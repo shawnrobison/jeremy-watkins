@@ -132,34 +132,45 @@
     <!-- ── Tab: Automotive ─────────────────────────────────────────────── -->
     <main class="tab-content" id="tab-automotive">
 
-      <section class="panel coming-soon-panel">
+      <section class="panel auto-vehicles-panel">
         <div class="panel-header">
           <div class="panel-title">
             <span class="icon">&#128664;</span>
             Vehicles
           </div>
+          <span style="font-size:12px; color:var(--text-muted)" id="vehicle-count"></span>
         </div>
         <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#128664;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Vehicle records, maintenance history, insurance, and registration dates.</p>
+          <div id="vehicle-grid" class="vehicle-grid">
+            <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
           </div>
         </div>
       </section>
 
-      <section class="panel coming-soon-panel">
+      <section class="panel auto-insurance-panel">
         <div class="panel-header">
           <div class="panel-title">
-            <span class="icon">&#128295;</span>
-            Service & Maintenance
+            <span class="icon">&#128220;</span>
+            Insurance
           </div>
         </div>
         <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#128295;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Oil changes, tire rotations, upcoming service reminders.</p>
+          <div id="insurance-data">
+            <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel auto-loan-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128181;</span>
+            Active Loans
+          </div>
+        </div>
+        <div class="panel-body">
+          <div id="loan-data">
+            <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
           </div>
         </div>
       </section>

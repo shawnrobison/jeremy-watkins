@@ -281,6 +281,112 @@ async function loadSpendingChart() {
   }
 }
 
+// ── Automotive ────────────────────────────────────────────────────────────────
+async function loadAutomotive() {
+  try {
+    const res  = await fetch("data/automotive.json");
+    const data = await res.json();
+
+    // Vehicles
+    const grid  = document.getElementById("vehicle-grid");
+    const count = document.getElementById("vehicle-count");
+    if (count) count.textContent = `${data.vehicles.length} vehicles`;
+
+    grid.innerHTML = data.vehicles.map(v => {
+      const mileageStr = v.mileage
+        ? `${v.mileage.toLocaleString()} mi${v.mileage_date ? " · " + formatShortDate(v.mileage_date) : ""}`
+        : "Mileage unknown";
+
+      const photoHtml = v.image
+        ? `<img src="${v.image}" alt="${v.year} ${v.make} ${v.model}" class="vehicle-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+           <div class="vehicle-photo-fallback" style="display:none">&#128664;</div>`
+        : `<div class="vehicle-photo-fallback">&#128664;</div>`;
+
+      return `
+        <div class="vehicle-card">
+          <div class="vehicle-photo-wrap">${photoHtml}</div>
+          <div>
+            <div class="vehicle-year-make">${v.year} &middot; ${v.make}</div>
+            <div class="vehicle-model">${v.model}</div>
+            <div class="vehicle-driver">${v.driver}</div>
+          </div>
+          <div class="vehicle-mileage">&#128205; ${mileageStr}</div>
+          <div class="vehicle-divider"></div>
+          <div class="vehicle-service">
+            <div class="service-label">Oil Change</div>
+            <span class="status-badge status-${v.oil_change.status}">${v.oil_change.label}</span>
+            <div class="service-detail">${v.oil_change.detail}</div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Insurance
+    const ins = data.insurance;
+    const renewalDate    = new Date(ins.next_renewal);
+    const daysToRenewal  = Math.ceil((renewalDate - new Date()) / (1000 * 60 * 60 * 24));
+    const renewalWarning = daysToRenewal <= 60
+      ? `<div class="renewal-alert">&#9888; Renewal in ${daysToRenewal} days &mdash; ${ins.next_renewal}</div>` : "";
+
+    document.getElementById("insurance-data").innerHTML = `
+      <div class="auto-info-row">
+        <span class="auto-info-label">Carrier</span>
+        <span class="auto-info-value highlight">${ins.carrier}</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Premium</span>
+        <span class="auto-info-value">${formatCurrency(ins.premium)} / ${ins.frequency.toLowerCase()}</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Annualized</span>
+        <span class="auto-info-value">${formatCurrency(ins.premium * 2)} / year</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Next Renewal</span>
+        <span class="auto-info-value ${daysToRenewal <= 60 ? "warning" : ""}">${ins.next_renewal}</span>
+      </div>
+      ${renewalWarning}
+    `;
+
+    // Loans
+    const loans = data.vehicles.filter(v => v.loan);
+    const loanEl = document.getElementById("loan-data");
+    if (loans.length === 0) {
+      loanEl.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:16px 0">No active vehicle loans.</div>`;
+    } else {
+      loanEl.innerHTML = loans.map(v => `
+        <div style="margin-bottom:16px">
+          <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:10px">${v.year} ${v.make} ${v.model}</div>
+          <div class="auto-info-row">
+            <span class="auto-info-label">Lender</span>
+            <span class="auto-info-value">${v.loan.lender}</span>
+          </div>
+          <div class="auto-info-row">
+            <span class="auto-info-label">Balance</span>
+            <span class="auto-info-value danger">${formatCurrency(v.loan.balance)}</span>
+          </div>
+          <div class="auto-info-row">
+            <span class="auto-info-label">Monthly</span>
+            <span class="auto-info-value">${formatCurrency(v.loan.monthly)}</span>
+          </div>
+          <div class="auto-info-row">
+            <span class="auto-info-label">Rate</span>
+            <span class="auto-info-value">${v.loan.rate}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+  } catch (e) {
+    console.error("Automotive load failed:", e);
+  }
+}
+
+function formatShortDate(iso) {
+  return new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+}
+
 // ── Tab switching ─────────────────────────────────────────────────────────────
 function initTabs() {
   document.querySelectorAll(".tab-btn").forEach(btn => {
@@ -302,4 +408,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadTodos();
   loadSpendingChart();
   fetchHsaTotal();
+  loadAutomotive();
 });
