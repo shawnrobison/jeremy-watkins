@@ -58,7 +58,7 @@
   {
     "id": 9,
     "text": "Complete Open Brain health category (doctors, insurance, allergies, meds)",
-    "done": false,
+    "done": true,
     "priority": "medium",
     "category": "Open Brain"
   },
