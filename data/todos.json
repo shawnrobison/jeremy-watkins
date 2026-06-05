@@ -44,7 +44,7 @@
   {
     "id": 7,
     "text": "Build out Automotive tab — vehicles, service, insurance",
-    "done": false,
+    "done": true,
     "priority": "low",
     "category": "Dashboard"
   },
