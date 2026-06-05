@@ -180,51 +180,41 @@
     <!-- ── Tab: Home ───────────────────────────────────────────────────── -->
     <main class="tab-content" id="tab-home">
 
-      <section class="panel coming-soon-panel">
+      <section class="panel home-property-panel">
         <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#127968;</span>
-            Property
-          </div>
+          <div class="panel-title"><span class="icon">&#127968;</span> Property</div>
         </div>
-        <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#127968;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Home details, mortgage info, and property documents.</p>
-          </div>
+        <div class="panel-body" id="home-property">
+          <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
         </div>
       </section>
 
-      <section class="panel coming-soon-panel">
+      <section class="panel home-projects-panel">
         <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#9874;</span>
-            Projects &amp; Maintenance
-          </div>
+          <div class="panel-title"><span class="icon">&#9874;</span> Projects &amp; Maintenance</div>
+          <span style="font-size:12px; color:var(--text-muted)" id="projects-count"></span>
         </div>
-        <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#9874;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Open projects, completed work, warranties, and contractor contacts.</p>
-          </div>
+        <div class="panel-body" id="home-projects">
+          <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
         </div>
       </section>
 
-      <section class="panel coming-soon-panel">
+      <section class="panel home-services-panel">
         <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#128268;</span>
-            Appliances
-          </div>
+          <div class="panel-title"><span class="icon">&#128295;</span> Home Services</div>
         </div>
-        <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#128268;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Appliance inventory, purchase dates, manuals, and warranty expirations.</p>
-          </div>
+        <div class="panel-body" id="home-services">
+          <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
+        </div>
+      </section>
+
+      <section class="panel home-appliances-panel">
+        <div class="panel-header">
+          <div class="panel-title"><span class="icon">&#128268;</span> Appliances</div>
+          <span style="font-size:12px; color:var(--text-muted)" id="appliances-count"></span>
+        </div>
+        <div class="panel-body" id="home-appliances">
+          <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
         </div>
       </section>
 

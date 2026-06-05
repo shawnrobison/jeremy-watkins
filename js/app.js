@@ -281,6 +281,81 @@ async function loadSpendingChart() {
   }
 }
 
+// ── Home ──────────────────────────────────────────────────────────────────────
+async function loadHome() {
+  try {
+    const res  = await fetch("data/home.json");
+    const data = await res.json();
+
+    // Property
+    const p = data.property;
+    const payoffYear = p.mortgage_payoff ? p.mortgage_payoff.split("-")[0] : "—";
+    document.getElementById("home-property").innerHTML = `
+      <div class="auto-info-row">
+        <span class="auto-info-label">Est. Value</span>
+        <span class="auto-info-value highlight">${formatCurrency(p.estimated_value)}</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Mortgage</span>
+        <span class="auto-info-value">${formatCurrency(p.mortgage_payment)} / mo</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Servicer</span>
+        <span class="auto-info-value">${p.mortgage_payee}</span>
+      </div>
+      <div class="auto-info-row">
+        <span class="auto-info-label">Payoff</span>
+        <span class="auto-info-value">${p.mortgage_payoff || "—"}</span>
+      </div>
+    `;
+
+    // Projects
+    const openProjects = data.projects.filter(x => x.status === "open");
+    const projCount = document.getElementById("projects-count");
+    if (projCount) projCount.textContent = `${openProjects.length} open`;
+    document.getElementById("home-projects").innerHTML = data.projects.map(proj => `
+      <div class="home-project-item">
+        <div class="home-project-header">
+          <span class="home-project-name">${proj.item}</span>
+          <span class="status-badge status-${proj.priority === "high" ? "urgent" : proj.priority === "medium" ? "soon" : "ok"}">${proj.priority}</span>
+        </div>
+        <div class="service-detail">${proj.notes}</div>
+      </div>
+    `).join("");
+
+    // Services
+    document.getElementById("home-services").innerHTML = data.services.map(s => `
+      <div class="home-service-item">
+        <div class="home-service-header">
+          <span class="home-service-name">${s.name}</span>
+          <span style="font-size:11px;color:var(--text-muted)">${s.type}</span>
+        </div>
+        ${s.monthly ? `<div class="auto-info-row" style="padding:4px 0"><span class="auto-info-label">Monthly</span><span class="auto-info-value">${formatCurrency(s.monthly)}</span></div>` : ""}
+        ${s.phone ? `<div class="auto-info-row" style="padding:4px 0"><span class="auto-info-label">Phone</span><span class="auto-info-value">${s.phone}</span></div>` : ""}
+        <div class="service-detail" style="margin-top:4px">${s.notes}</div>
+      </div>
+    `).join("");
+
+    // Appliances
+    const appCount = document.getElementById("appliances-count");
+    if (appCount) appCount.textContent = `${data.appliances.length} items`;
+    document.getElementById("home-appliances").innerHTML = data.appliances.map(a => `
+      <div class="home-appliance-item">
+        <div class="home-appliance-header">
+          <span class="home-appliance-name">${a.name}</span>
+          <span class="status-badge status-${a.status === "ok" ? "ok" : "soon"}">${a.status === "watch" ? "Watch" : "OK"}</span>
+        </div>
+        <div style="font-size:12px;color:var(--text-muted);margin-top:2px">${a.brand} &middot; ${a.model}</div>
+        ${a.serial ? `<div style="font-size:11px;color:var(--text-muted);margin-top:1px">S/N: ${a.serial}</div>` : ""}
+        <div class="service-detail" style="margin-top:3px">${a.notes}</div>
+      </div>
+    `).join("");
+
+  } catch (e) {
+    console.error("Home load failed:", e);
+  }
+}
+
 // ── Automotive ────────────────────────────────────────────────────────────────
 async function loadAutomotive() {
   try {
@@ -409,4 +484,5 @@ document.addEventListener("DOMContentLoaded", () => {
   loadSpendingChart();
   fetchHsaTotal();
   loadAutomotive();
+  loadHome();
 });

@@ -655,6 +655,59 @@ header {
   color: var(--warning);
 }
 
+/* ── Home Tab ─────────────────────────────────────────────────────────────── */
+.home-property-panel  { grid-column: 1; }
+.home-projects-panel  { grid-column: 2; }
+.home-services-panel  { grid-column: 3; }
+.home-appliances-panel { grid-column: 1 / -1; }
+
+.home-project-item, .home-service-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-project-item:last-child,
+.home-service-item:last-child { border-bottom: none; }
+
+.home-project-header, .home-service-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.home-project-name, .home-service-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.home-appliances-panel .panel-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.home-appliance-item {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.home-appliance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.home-appliance-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
 /* ── Coming Soon ──────────────────────────────────────────────────────────── */
 .coming-soon {
   display: flex;

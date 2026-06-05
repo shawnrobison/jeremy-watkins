@@ -1,0 +1,49 @@
+{
+  "property": {
+    "address": "1233 Robison Residence",
+    "estimated_value": 685000,
+    "mortgage_payment": 3742.24,
+    "mortgage_payoff": "2040-08",
+    "mortgage_payee": "HMG 1072"
+  },
+  "services": [
+    {
+      "name": "Romney Pest Control",
+      "type": "Pest Control",
+      "monthly": 91.69,
+      "phone": "214-222-7378",
+      "notes": "Regular pest treatment + termite prevention"
+    },
+    {
+      "name": "Vivint",
+      "type": "Home Security",
+      "monthly": 82.67,
+      "phone": null,
+      "notes": "Monthly monitoring"
+    },
+    {
+      "name": "Clear Waters Plumbers",
+      "type": "Plumbing",
+      "monthly": null,
+      "phone": "817-890-5513",
+      "notes": "On-call vendor"
+    }
+  ],
+  "appliances": [
+    { "name": "Dishwasher",      "brand": "LG QuadWash",   "model": "LDP6810SS",    "serial": "009KVWMK12219", "status": "ok",      "notes": "Wi-Fi enabled ThinQ" },
+    { "name": "Refrigerator",   "brand": "Whirlpool",     "model": "WRF736SDAM12", "serial": "K50312274",    "status": "ok",      "notes": "26 cu ft, purchased 2017" },
+    { "name": "Washer",         "brand": "GE",            "model": "GTW460ASJ8WW", "serial": "GL159221G",    "status": "watch",   "notes": "Intermittent problems — monitor" },
+    { "name": "Dryer",          "brand": "GE",            "model": "GTD42EASJ2WW", "serial": "GL707738C",    "status": "watch",   "notes": "Intermittent problems — replacement likely needed" },
+    { "name": "Microwave",      "brand": "Whirlpool",     "model": "WMC30516AS0",  "serial": "XV70300285",   "status": "ok",      "notes": "Manufactured Jan 2017" },
+    { "name": "Garbage Disposal","brand": "InSinkErator",  "model": "Badger 5-91",  "serial": "23121273687",  "status": "ok",      "notes": "120V / 6.3A" },
+    { "name": "Wall Oven",      "brand": "Whirlpool",     "model": "Unknown",      "serial": null,           "status": "ok",      "notes": "Model label not accessible — pull when servicing" }
+  ],
+  "projects": [
+    { "item": "Downspout drain line",   "status": "open",   "priority": "high",   "notes": "Corrugated pipe unburied — needs to be buried or anchored away from foundation" },
+    { "item": "Boxwood health check",   "status": "open",   "priority": "high",   "notes": "Interior browning — check for blight (black lesions = fungal) vs. normal dieback" },
+    { "item": "Washer/Dryer replacement","status": "open",  "priority": "medium", "notes": "Both units have intermittent issues — plan replacement" },
+    { "item": "Crape Myrtle base",      "status": "open",   "priority": "low",    "notes": "Root suckers crowding trunk base — clean up" },
+    { "item": "Red Yucca deadheading",  "status": "open",   "priority": "low",    "notes": "Flower spikes nearly spent — deadhead at base when done" },
+    { "item": "Bermuda weed treatment", "status": "open",   "priority": "low",    "notes": "Celsius WG — 2nd application due mid-July 2026" }
+  ]
+}
