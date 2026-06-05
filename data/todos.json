@@ -65,14 +65,14 @@
   {
     "id": 10,
     "text": "Document contacts and vendors in Open Brain",
-    "done": false,
+    "done": true,
     "priority": "low",
     "category": "Open Brain"
   },
   {
     "id": 11,
     "text": "Document appliances in Open Brain",
-    "done": false,
+    "done": true,
     "priority": "low",
     "category": "Open Brain"
   }
