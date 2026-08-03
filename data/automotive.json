@@ -58,9 +58,9 @@
       "mileage": 200000,
       "mileage_date": null,
       "oil_change": {
-        "status": "soon",
-        "label": "Due Aug 2026",
-        "detail": "Before Blake returns to SNU for fall"
+        "status": "ok",
+        "label": "Done Aug 2, 2026",
+        "detail": "Blake changed the oil August 2, 2026; done before he returns to SNU for fall"
       },
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nissan_Xterra_%284733651305%29.jpg/960px-Nissan_Xterra_%284733651305%29.jpg",
       "loan": null
