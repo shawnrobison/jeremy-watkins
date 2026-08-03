@@ -9,8 +9,8 @@
       "mileage_date": "2026-06-02",
       "oil_change": {
         "status": "ok",
-        "label": "Done 6/2/2026",
-        "detail": "Jiffy Lube — Basswood Blvd, Fort Worth"
+        "label": "Done Jun 19, 2026",
+        "detail": "Completed June 19, 2026; urgent pre-road-trip action item resolved"
       },
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ford_F-150_%28thirteenth_generation%29_IMG_0504.jpg/960px-Ford_F-150_%28thirteenth_generation%29_IMG_0504.jpg",
       "loan": null
@@ -23,14 +23,14 @@
       "mileage": 85000,
       "mileage_date": null,
       "oil_change": {
-        "status": "urgent",
-        "label": "Due Now",
-        "detail": "Schedule immediately"
+        "status": "ok",
+        "label": "Done Jun 19, 2026",
+        "detail": "Completed June 19, 2026"
       },
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ford_Expedition_Platinum_U553_FL_Oxford_White_%285%29.jpg/960px-Ford_Expedition_Platinum_U553_FL_Oxford_White_%285%29.jpg",
       "loan": {
         "lender": "Ford Motor Credit",
-        "balance": 18387.60,
+        "balance": 18387.6,
         "monthly": 626.91,
         "rate": "~6%"
       }
@@ -45,7 +45,7 @@
       "oil_change": {
         "status": "soon",
         "label": "Due Aug 2026",
-        "detail": "Before school starts — check mileage"
+        "detail": "Before school starts - check mileage"
       },
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/%2713_Ford_Fusion_Hybrid_%28MIAS_%2713%29.jpg/960px-%2713_Ford_Fusion_Hybrid_%28MIAS_%2713%29.jpg",
       "loan": null
@@ -68,7 +68,7 @@
   ],
   "insurance": {
     "carrier": "Root Insurance",
-    "premium": 4377.00,
+    "premium": 4377.0,
     "frequency": "Semi-annual",
     "next_renewal": "2026-10-23"
   }

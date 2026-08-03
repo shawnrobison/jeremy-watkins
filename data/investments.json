@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-07-17",
+  "portfolio_value": 257537.09,
+  "daily_change": -2627.20,
+  "change_since_prior": -2377.01,
+  "change_since_prior_pct": -0.91,
+  "prior_snapshot_date": "2026-06-20",
+  "accounts": [
+    {
+      "label": "Taxable",
+      "value": 97735.08
+    },
+    {
+      "label": "Roth IRAs",
+      "value": 126156.25
+    },
+    {
+      "label": "HSA",
+      "value": 15239.31
+    },
+    {
+      "label": "Education",
+      "value": 18403.64
+    },
+    {
+      "label": "Traditional IRAs",
+      "value": 2.81
+    }
+  ],
+  "spyi": {
+    "value": 127816.74,
+    "portfolio_share_pct": 49.63,
+    "unrealized_gain": 13457.16,
+    "unrealized_gain_pct": 11.77,
+    "distributions_apr_jun": 3751.52
+  },
+  "expected_return_pct": 15,
+  "note": "True YTD return needs a January 1 baseline and complete cash-flow history."
+}

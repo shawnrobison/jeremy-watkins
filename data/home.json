@@ -28,23 +28,174 @@
       "monthly": null,
       "phone": "817-890-5513",
       "notes": "On-call vendor"
+    },
+    {
+      "name": "Precision Garage Door",
+      "type": "Garage Door",
+      "monthly": null,
+      "phone": "214-736-8789",
+      "notes": "On-call garage door repair and door replacement vendor"
+    }
+  ],
+  "service_visits": [
+    {
+      "id": "2026-06-17-precision-door",
+      "vendor": "Precision Door",
+      "category": "Garage Door",
+      "service_area": "Garage",
+      "visit_date": "2026-06-29",
+      "status": "completed",
+      "appointment_window": "8:00 AM - 12:00 PM",
+      "contact": {
+        "name": null,
+        "phone": "214-736-8789",
+        "email": "customerservice@precisiondoortx.com"
+      },
+      "cost": 1913.9,
+      "warranty": null,
+      "estimate": {
+        "name": "CHI Special Door Order",
+        "accepted_date": "2026-06-18",
+        "total": 1913.9
+      },
+      "documents": [
+        {
+          "type": "estimate",
+          "subject": "Precision Door Service Estimate",
+          "received_date": "2026-06-18",
+          "gmail_message_id": "19edb1257a863bd5",
+          "attachment": null,
+          "notes": "Email includes ServiceTitan estimate link."
+        },
+        {
+          "type": "accepted_estimate",
+          "subject": "CHI Special Door Order Accepted",
+          "received_date": "2026-06-18",
+          "gmail_message_id": "19edc82dfad28d08",
+          "attachment": "Estimate.pdf",
+          "notes": "Email confirms accepted estimate selection and total."
+        },
+        {
+          "type": "invoice",
+          "subject": "Precision Door Service Invoice",
+          "received_date": "2026-06-19",
+          "gmail_message_id": "19ee0f7db19be701",
+          "attachment": "Invoice #130675078.pdf",
+          "notes": "Email includes payment link; payment status not verified."
+        }
+      ],
+      "source": {
+        "type": "owner-confirmed",
+        "mailbox": null,
+        "subject": null,
+        "received_date": "2026-07-18",
+        "confidence": "owner-confirmed"
+      },
+      "summary": "Precision Garage Door repair and installation are complete. The accepted CHI Special Door Order totaled $1,913.90.",
+      "outcome": "Garage door repair and installation completed; no follow-up work is currently recorded.",
+      "follow_ups": []
     }
   ],
   "appliances": [
-    { "name": "Dishwasher",      "brand": "LG QuadWash",   "model": "LDP6810SS",    "serial": "009KVWMK12219", "status": "ok",      "notes": "Wi-Fi enabled ThinQ" },
-    { "name": "Refrigerator",   "brand": "Whirlpool",     "model": "WRF736SDAM12", "serial": "K50312274",    "status": "ok",      "notes": "26 cu ft, purchased 2017" },
-    { "name": "Washer",         "brand": "GE",            "model": "GTW460ASJ8WW", "serial": "GL159221G",    "status": "watch",   "notes": "Intermittent problems — monitor" },
-    { "name": "Dryer",          "brand": "GE",            "model": "GTD42EASJ2WW", "serial": "GL707738C",    "status": "watch",   "notes": "Intermittent problems — replacement likely needed" },
-    { "name": "Microwave",      "brand": "Whirlpool",     "model": "WMC30516AS0",  "serial": "XV70300285",   "status": "ok",      "notes": "Manufactured Jan 2017" },
-    { "name": "Garbage Disposal","brand": "InSinkErator",  "model": "Badger 5-91",  "serial": "23121273687",  "status": "ok",      "notes": "120V / 6.3A" },
-    { "name": "Wall Oven",      "brand": "Whirlpool",     "model": "Unknown",      "serial": null,           "status": "ok",      "notes": "Model label not accessible — pull when servicing" }
+    {
+      "name": "Dishwasher",
+      "brand": "LG QuadWash",
+      "model": "LDP6810SS",
+      "serial": "009KVWMK12219",
+      "status": "ok",
+      "notes": "Wi-Fi enabled ThinQ"
+    },
+    {
+      "name": "Refrigerator",
+      "brand": "Whirlpool",
+      "model": "WRF736SDAM12",
+      "serial": "K50312274",
+      "status": "ok",
+      "notes": "26 cu ft, purchased 2017"
+    },
+    {
+      "name": "Washer",
+      "brand": "GE",
+      "model": "GTW460ASJ8WW",
+      "serial": "GL159221G",
+      "status": "watch",
+      "notes": "Intermittent problems - monitor"
+    },
+    {
+      "name": "Dryer",
+      "brand": "GE",
+      "model": "GTD42EASJ2WW",
+      "serial": "GL707738C",
+      "status": "watch",
+      "notes": "Intermittent problems - replacement likely needed"
+    },
+    {
+      "name": "Microwave",
+      "brand": "Whirlpool",
+      "model": "WMC30516AS0",
+      "serial": "XV70300285",
+      "status": "ok",
+      "notes": "Manufactured Jan 2017"
+    },
+    {
+      "name": "Garbage Disposal",
+      "brand": "InSinkErator",
+      "model": "Badger 5-91",
+      "serial": "23121273687",
+      "status": "ok",
+      "notes": "120V / 6.3A"
+    },
+    {
+      "name": "Wall Oven",
+      "brand": "Whirlpool",
+      "model": "Unknown",
+      "serial": null,
+      "status": "ok",
+      "notes": "Model label not accessible - pull when servicing"
+    }
   ],
   "projects": [
-    { "item": "Downspout drain line",   "status": "open",   "priority": "high",   "notes": "Corrugated pipe unburied — needs to be buried or anchored away from foundation" },
-    { "item": "Boxwood health check",   "status": "open",   "priority": "high",   "notes": "Interior browning — check for blight (black lesions = fungal) vs. normal dieback" },
-    { "item": "Washer/Dryer replacement","status": "open",  "priority": "medium", "notes": "Both units have intermittent issues — plan replacement" },
-    { "item": "Crape Myrtle base",      "status": "open",   "priority": "low",    "notes": "Root suckers crowding trunk base — clean up" },
-    { "item": "Red Yucca deadheading",  "status": "open",   "priority": "low",    "notes": "Flower spikes nearly spent — deadhead at base when done" },
-    { "item": "Bermuda weed treatment", "status": "open",   "priority": "low",    "notes": "Celsius WG — 2nd application due mid-July 2026" }
+    {
+      "item": "Downspout drain line",
+      "status": "open",
+      "priority": "high",
+      "notes": "Corrugated pipe unburied - needs to be buried or anchored away from foundation"
+    },
+    {
+      "item": "Boxwood health check",
+      "status": "open",
+      "priority": "high",
+      "notes": "Interior browning - check for blight (black lesions = fungal) vs. normal dieback"
+    },
+    {
+      "item": "Washer/Dryer replacement",
+      "status": "open",
+      "priority": "medium",
+      "notes": "Both units have intermittent issues - plan replacement"
+    },
+    {
+      "item": "Crape Myrtle base",
+      "status": "open",
+      "priority": "low",
+      "notes": "Root suckers crowding trunk base - clean up"
+    },
+    {
+      "item": "Red Yucca deadheading",
+      "status": "open",
+      "priority": "low",
+      "notes": "Flower spikes nearly spent - deadhead at base when done"
+    },
+    {
+      "item": "Bermuda weed treatment",
+      "status": "open",
+      "priority": "low",
+      "notes": "Quinclorac pass 1 applied June 29, 2026; reassess surviving mature crabgrass and spot-spray only if needed"
+    },
+    {
+      "item": "AC air filter change",
+      "status": "completed",
+      "priority": "low",
+      "notes": "Home AC filters changed July 17, 2026; monthly maintenance cadence"
+    }
   ]
 }

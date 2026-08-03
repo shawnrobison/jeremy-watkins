@@ -1,0 +1,47 @@
+{
+  "as_of": "2026-07-17",
+  "scope": [
+    "Traditional IRA (JSR)",
+    "Traditional IRA (SER)",
+    "ROTH IRA (JSR)",
+    "ROTH IRA (SER)",
+    "Joint WROS (S&J Savings)",
+    "Health Savings Account"
+  ],
+  "savings_goal": {
+    "year": 2026,
+    "annual_target": 25000,
+    "calculation": "net_external_contributions",
+    "gross_external_contributions": 19836,
+    "external_withdrawals": 8475,
+    "net_savings": 11361,
+    "months": [
+      { "label": "Jan", "period_end": "2026-01-31", "net_savings": 180 },
+      { "label": "Feb", "period_end": "2026-02-28", "net_savings": 5020 },
+      { "label": "Mar", "period_end": "2026-03-31", "net_savings": 4718 },
+      { "label": "Apr", "period_end": "2026-04-30", "net_savings": 4248 },
+      { "label": "May", "period_end": "2026-05-31", "net_savings": -5068 },
+      { "label": "Jun", "period_end": "2026-06-30", "net_savings": 2013 },
+      { "label": "Jul", "period_end": "2026-07-17", "net_savings": 250 }
+    ]
+  },
+  "portfolio_history": {
+    "valuation_basis": "Fidelity monthly performance ending balances",
+    "points": [
+      { "date": "2025-07-31", "value": 195811.00 },
+      { "date": "2025-08-31", "value": 201782.29 },
+      { "date": "2025-09-30", "value": 212352.33 },
+      { "date": "2025-10-31", "value": 218073.12 },
+      { "date": "2025-11-30", "value": 207910.20 },
+      { "date": "2025-12-31", "value": 209787.81 },
+      { "date": "2026-01-31", "value": 212606.90 },
+      { "date": "2026-02-28", "value": 212133.47 },
+      { "date": "2026-03-31", "value": 209401.03 },
+      { "date": "2026-04-30", "value": 234074.22 },
+      { "date": "2026-05-31", "value": 242097.02 },
+      { "date": "2026-06-30", "value": 238740.24 },
+      { "date": "2026-07-17", "value": 239188.60 }
+    ],
+    "note": "The latest point includes the current $2.81 Traditional IRA balance. Earlier Traditional IRA valuations are unavailable; the remaining history includes Joint WROS (S&J Savings), HSA, and both Roth IRAs."
+  }
+}

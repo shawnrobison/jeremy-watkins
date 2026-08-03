@@ -1,76 +1,214 @@
 {
-  "generated": "2026-06-03",
-  "source": "Chase Checking, Chase CC, Citi CC (Mar-May), Fidelity CC",
+  "generated": "2026-07-18",
+  "source": "Verified occurrence-aware household transaction ledger through 2026-07-18",
   "notes": {
-    "march_income": "High due to large TRINET payment on 3/20 — likely includes one-time bonus or reimbursement",
-    "april_misc": "High Misc in April due to $4,377 Root Insurance annual premium (car insurance)",
-    "savings": "Separated from spending — Fidelity transfers treated as savings, not expense"
+    "deduplication": "Source-hash-plus-row-ordinal IDs preserve legitimate identical rows; prior-source overlaps use multiset subtraction.",
+    "exclusions": "Transfers and card payments are excluded from income and household spending."
   },
   "months": {
+    "2026-01": {
+      "label": "January",
+      "record_count": 151,
+      "income": 18438.08,
+      "spending_total": 17071.01,
+      "savings": 180.0,
+      "categories": {
+        "Auto": 141.16,
+        "Debt": 626.91,
+        "Dining": 276.04,
+        "Entertainment": 65.76,
+        "Gas": 198.35,
+        "Groceries": 1316.9,
+        "Home": 115.33,
+        "Housing": 3790.23,
+        "Kids": 713.03,
+        "Medical": 78.06,
+        "Shopping": 416.0,
+        "Subscriptions": 76.89,
+        "Tithe/Church": 1841.0,
+        "Uncategorized": 6823.36,
+        "Utilities": 591.99
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 14,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
+      }
+    },
+    "2026-02": {
+      "label": "February",
+      "record_count": 186,
+      "income": 33065.18,
+      "spending_total": 17734.63,
+      "savings": 5620.0,
+      "categories": {
+        "Auto": 631.43,
+        "Debt": 626.91,
+        "Dining": 352.12,
+        "Entertainment": 50.76,
+        "Gas": 594.15,
+        "Groceries": 1077.42,
+        "Home": 192.1,
+        "Housing": 3790.23,
+        "Kids": 803.15,
+        "Shopping": 497.82,
+        "Subscriptions": 190.72,
+        "Tithe/Church": 3223.0,
+        "Travel": 209.43,
+        "Uncategorized": 4916.6,
+        "Utilities": 578.79
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 13,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
+      }
+    },
     "2026-03": {
       "label": "March",
-      "income": 29748.87,
-      "spending_total": 22418.99,
-      "savings": 17518.00,
+      "record_count": 228,
+      "income": 29901.37,
+      "spending_total": 21701.36,
+      "savings": 17518.0,
       "categories": {
+        "Auto": 325.93,
+        "Debt": 626.91,
+        "Dining": 417.17,
+        "Entertainment": 197.76,
+        "Gas": 637.68,
+        "Groceries": 2120.4,
+        "Home": 100.9,
         "Housing": 3790.23,
-        "Utilities": 679.32,
-        "Groceries": 2471.50,
-        "Dining Out": 1184.84,
-        "Transportation": 1775.34,
-        "Tithe/Church": 2974.00,
-        "Kids/Activities": 1817.96,
-        "Shopping": 1918.33,
-        "Subscriptions": 350.45,
-        "Travel": 1213.00,
-        "Golf": 147.00,
-        "Pest Control": 87.33,
-        "Tax": 2348.00,
-        "Misc": 1661.69
+        "Insurance": -109.33,
+        "Kids": 811.21,
+        "Shopping": 1080.45,
+        "Subscriptions": 125.77,
+        "Tithe/Church": 2974.0,
+        "Travel": 611.19,
+        "Uncategorized": 7656.48,
+        "Utilities": 334.61
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 21,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
       }
     },
     "2026-04": {
       "label": "April",
-      "income": 19812.49,
-      "spending_total": 21629.27,
-      "savings": 4248.00,
+      "record_count": 194,
+      "income": 21540.33,
+      "spending_total": 20981.22,
+      "savings": 4248.0,
       "categories": {
+        "Auto": 642.32,
+        "Debt": 626.91,
+        "Dining": 280.27,
+        "Entertainment": 50.76,
+        "Gas": 647.58,
+        "Groceries": 1014.63,
+        "Home": 91.69,
         "Housing": 3742.24,
-        "Utilities": 664.61,
-        "Groceries": 1721.23,
-        "Dining Out": 247.69,
-        "Transportation": 2688.65,
-        "Tithe/Church": 1982.00,
-        "Kids/Activities": 1489.65,
-        "Shopping": 1111.21,
-        "Subscriptions": 446.66,
-        "Travel": 1500.35,
-        "Golf": 0.00,
-        "Pest Control": 91.69,
-        "Tax": 0.00,
-        "Misc": 5943.29
+        "Insurance": 4377.0,
+        "Kids": 968.71,
+        "Shopping": 561.52,
+        "Subscriptions": 125.12,
+        "Tithe/Church": 1982.0,
+        "Uncategorized": 5558.03,
+        "Utilities": 312.44
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 13,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
       }
     },
     "2026-05": {
       "label": "May",
-      "income": 19865.59,
-      "spending_total": 21829.45,
-      "savings": 1432.00,
+      "record_count": 229,
+      "income": 22245.08,
+      "spending_total": 21737.23,
+      "savings": -4368.0,
       "categories": {
+        "Auto": 1045.7,
+        "Debt": 626.91,
+        "Dining": 364.79,
+        "Entertainment": 205.3,
+        "Gas": 962.02,
+        "Groceries": 1206.97,
+        "Home": 222.75,
         "Housing": 3742.24,
-        "Utilities": 913.76,
-        "Groceries": 2043.42,
-        "Dining Out": 379.55,
-        "Transportation": 2908.30,
-        "Tithe/Church": 2053.00,
-        "Kids/Activities": 2623.52,
-        "Shopping": 1061.46,
-        "Subscriptions": 961.08,
-        "Travel": 3825.11,
-        "Golf": 156.70,
-        "Pest Control": 91.69,
-        "Tax": 0.00,
-        "Misc": 1069.62
+        "Kids": 658.22,
+        "Medical": 5.4,
+        "Shopping": 234.75,
+        "Subscriptions": 594.16,
+        "Tithe/Church": 2053.0,
+        "Travel": 1612.44,
+        "Uncategorized": 7695.18,
+        "Utilities": 507.4
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 17,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
+      }
+    },
+    "2026-06": {
+      "label": "June",
+      "record_count": 239,
+      "income": 20806.21,
+      "spending_total": 21806.62,
+      "savings": 2013.0,
+      "categories": {
+        "Auto": 960.0,
+        "Debt": 626.91,
+        "Dining": 194.49,
+        "Entertainment": 135.72,
+        "Gas": 1021.46,
+        "Groceries": 1542.67,
+        "Home": 2107.48,
+        "Housing": 3742.24,
+        "Kids": 844.33,
+        "Medical": 32.89,
+        "Shopping": 412.63,
+        "Subscriptions": 236.83,
+        "Tithe/Church": 2081.0,
+        "Uncategorized": 7530.72,
+        "Utilities": 337.25
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 14,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 60.81
+      }
+    },
+    "2026-07": {
+      "label": "July",
+      "record_count": 118,
+      "income": 7095.71,
+      "spending_total": 11979.72,
+      "savings": 250.0,
+      "categories": {
+        "Auto": 641.03,
+        "Debt": 626.91,
+        "Dining": 141.0,
+        "Entertainment": 38.87,
+        "Gas": 269.49,
+        "Groceries": 473.77,
+        "Home": 91.69,
+        "Housing": 3742.24,
+        "Kids": 881.08,
+        "Medical": 32.28,
+        "Shopping": 388.87,
+        "Subscriptions": 187.17,
+        "Tithe/Church": 760.0,
+        "Uncategorized": 3263.58,
+        "Utilities": 441.74
+      },
+      "excluded": {
+        "transfers_and_card_payments_count": 4,
+        "transfers_and_card_payments": true,
+        "work_travel_reimbursed": 0.0
       }
     }
   }

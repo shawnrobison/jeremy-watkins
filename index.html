@@ -51,7 +51,7 @@
             <span class="icon">&#128101;</span>
             Agent Team
           </div>
-          <span style="font-size:12px; color:var(--text-muted)">4 specialists active</span>
+          <span id="team-count" style="font-size:12px; color:var(--text-muted)">Loading...</span>
         </div>
         <div class="panel-body">
           <div class="team-grid" id="team-grid">
@@ -64,6 +64,83 @@
 
     <!-- ── Tab: Financials ─────────────────────────────────────────────── -->
     <main class="tab-content" id="tab-financials">
+
+      <section class="panel chart-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128202;</span>
+            Income vs. Spending
+          </div>
+          <span style="font-size:12px; color:var(--text-muted)">Jan &ndash; Jul 17, 2026</span>
+        </div>
+        <div class="panel-body">
+          <canvas id="spending-chart" height="220"></canvas>
+          <div class="chart-legend" id="chart-legend"></div>
+        </div>
+      </section>
+
+      <section class="panel retirement-savings-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#127937;</span>
+            Retirement savings goal
+          </div>
+          <span class="retirement-as-of" id="retirement-savings-as-of">Loading&hellip;</span>
+        </div>
+        <div class="panel-body retirement-savings-body">
+          <div class="retirement-goal-summary">
+            <div>
+              <div class="retirement-eyebrow">Net external savings</div>
+              <div class="retirement-goal-value" id="retirement-savings-total">&mdash;</div>
+            </div>
+            <div class="retirement-goal-progress" id="retirement-savings-progress">&mdash;</div>
+          </div>
+          <div class="retirement-chart-wrap retirement-chart-wrap-goal">
+            <canvas id="retirement-savings-chart" aria-label="Cumulative net retirement savings compared with the annual goal" role="img"></canvas>
+          </div>
+          <div class="retirement-goal-footer">
+            <span id="retirement-savings-remaining">&mdash;</span>
+            <span>$25,000 annual goal</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel investments-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <span class="icon">&#128181;</span>
+            Investments
+          </div>
+          <span class="investment-as-of" id="investment-updated">Loading&hellip;</span>
+        </div>
+        <div class="panel-body investment-body">
+          <div class="investment-overview">
+            <div>
+              <div class="investment-eyebrow">Household portfolio</div>
+              <div class="investment-total" id="investment-total">&mdash;</div>
+            </div>
+            <div class="investment-change" id="investment-change">&mdash;</div>
+          </div>
+
+          <div class="spyi-concentration">
+            <div class="spyi-header">
+              <div>
+                <span class="spyi-symbol">SPYI</span>
+                <span class="spyi-role">Income backbone</span>
+              </div>
+              <strong id="spyi-value">&mdash;</strong>
+            </div>
+            <div class="spyi-rail" aria-label="SPYI share of portfolio">
+              <div class="spyi-rail-fill" id="spyi-rail-fill"></div>
+              <div class="spyi-rail-midpoint" aria-hidden="true"></div>
+            </div>
+            <div class="spyi-share" id="spyi-share">&mdash;</div>
+          </div>
+
+          <div class="investment-account-grid" id="investment-accounts"></div>
+          <p class="investment-note" id="investment-note"></p>
+        </div>
+      </section>
 
       <section class="panel hsa-panel">
         <div class="panel-header">
@@ -97,32 +174,54 @@
         </div>
       </section>
 
-      <section class="panel chart-panel">
+      <section class="panel retirement-history-panel">
         <div class="panel-header">
           <div class="panel-title">
-            <span class="icon">&#128202;</span>
-            Income vs. Spending
+            <span class="icon">&#128200;</span>
+            Retirement portfolio over time
           </div>
-          <span style="font-size:12px; color:var(--text-muted)">Mar &ndash; May 2026</span>
+          <span class="retirement-as-of" id="retirement-history-as-of">Loading&hellip;</span>
         </div>
-        <div class="panel-body">
-          <canvas id="spending-chart" height="220"></canvas>
-          <div class="chart-legend" id="chart-legend"></div>
+        <div class="panel-body retirement-history-body">
+          <div class="retirement-history-summary">
+            <div>
+              <div class="retirement-eyebrow">Latest performance balance</div>
+              <div class="retirement-history-value" id="retirement-history-value">&mdash;</div>
+            </div>
+            <div class="retirement-history-change" id="retirement-history-change">&mdash;</div>
+          </div>
+          <div class="retirement-chart-wrap">
+            <canvas id="retirement-history-chart" aria-label="Retirement portfolio value over time" role="img"></canvas>
+          </div>
+          <p class="retirement-data-note" id="retirement-history-note"></p>
         </div>
       </section>
 
-      <section class="panel coming-soon-panel">
-        <div class="panel-header">
-          <div class="panel-title">
-            <span class="icon">&#128181;</span>
-            Investments
+      <section class="panel expense-category-panel">
+        <div class="panel-header expense-category-header">
+          <div>
+            <div class="panel-title">
+              <span class="icon">&#9673;</span>
+              Expenses by category
+            </div>
+            <p class="expense-category-kicker">Finley&rsquo;s verified household actuals</p>
           </div>
+          <label class="month-control" for="expense-month">
+            <span>Month</span>
+            <select id="expense-month" aria-label="Expense month"></select>
+          </label>
         </div>
-        <div class="panel-body">
-          <div class="coming-soon">
-            <div class="coming-soon-icon">&#128200;</div>
-            <div class="coming-soon-label">Coming Soon</div>
-            <p>Warren will connect portfolio data here.</p>
+        <div class="panel-body expense-category-body">
+          <div class="expense-wheel-wrap">
+            <canvas id="expense-category-chart" aria-label="Pie chart of expenses by category" role="img"></canvas>
+            <div class="expense-wheel-center" aria-hidden="true">
+              <span>Spent</span>
+              <strong id="expense-total">&mdash;</strong>
+            </div>
+          </div>
+          <div class="expense-category-detail">
+            <div class="expense-period-note" id="expense-period-note">Loading monthly categories&hellip;</div>
+            <div class="expense-category-legend" id="expense-category-legend"></div>
           </div>
         </div>
       </section>
@@ -208,6 +307,16 @@
         </div>
       </section>
 
+      <section class="panel home-service-visits-panel">
+        <div class="panel-header">
+          <div class="panel-title"><span class="icon">&#128221;</span> Service Visits</div>
+          <span style="font-size:12px; color:var(--text-muted)" id="service-visits-count"></span>
+        </div>
+        <div class="panel-body" id="home-service-visits">
+          <div class="loading"><div class="spinner"></div> Loading&hellip;</div>
+        </div>
+      </section>
+
       <section class="panel home-appliances-panel">
         <div class="panel-header">
           <div class="panel-title"><span class="icon">&#128268;</span> Appliances</div>
@@ -247,9 +356,7 @@
 
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <!-- Google Identity Services -->
-  <script src="https://accounts.google.com/gsi/client" onload="initGoogleAuth()" async defer></script>
-  <script src="config.js"></script>
+  <script src="js/homeServiceVisits.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

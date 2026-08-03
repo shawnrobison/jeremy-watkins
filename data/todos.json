@@ -15,7 +15,7 @@
   },
   {
     "id": 3,
-    "text": "Wire up HSA API key — no login required",
+    "text": "Wire up HSA API key - no login required",
     "done": true,
     "priority": "high",
     "category": "Infrastructure"
@@ -30,7 +30,7 @@
   {
     "id": 5,
     "text": "Wire investments panel to Warren's portfolio spreadsheet",
-    "done": false,
+    "done": true,
     "priority": "medium",
     "category": "Dashboard"
   },
@@ -43,14 +43,14 @@
   },
   {
     "id": 7,
-    "text": "Build out Automotive tab — vehicles, service, insurance",
+    "text": "Build out Automotive tab - vehicles, service, insurance",
     "done": true,
     "priority": "low",
     "category": "Dashboard"
   },
   {
     "id": 8,
-    "text": "Build out Home tab — property, projects, appliances",
+    "text": "Build out Home tab - property, projects, appliances",
     "done": true,
     "priority": "low",
     "category": "Dashboard"
@@ -58,7 +58,7 @@
   {
     "id": 9,
     "text": "Complete Open Brain health category (doctors, insurance, allergies, meds)",
-    "done": true,
+    "done": false,
     "priority": "medium",
     "category": "Open Brain"
   },
